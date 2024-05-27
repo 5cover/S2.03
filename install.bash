@@ -1,13 +1,7 @@
 #!/bin/env bash
 
-dpkg -i /usr/local/src/*
+# Script de mise en place du serveur (à compléter)
 
-mysql --user=root --password=lannion <<EOF
-    create database paolo;
-    show databases;
-    create table etudiants (
-      id int primary key,
-      nom text not null,
-      date_naissance date not null,
-      classement int not null);
-EOF
+source /etc/apache2/envvars
+
+dpkg -i /usr/local/src/*
