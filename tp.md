@@ -262,7 +262,7 @@ D'abord on se connecte à la CLI de MySql:
 
 Ensuite la commande `status` permet d'obtenir des informations :
 
-`mysql > status`
+`mysql> status`
 
 ```text
 mysql  Ver 8.0.29 for Linux on x86_64 (MySQL Community Server - GPL)
