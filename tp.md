@@ -190,7 +190,7 @@ En effet, comme *mapage* a pour extension HTML et non PHP, elle n'est pas reconn
 
 Le fichier de configuration à modifier est
 
-`/etc/apache2/mods-available/php7.4.conf`
+`/etc/apache2/mods-enabled/php7.4.conf`
 
 C'est cette section qui nous intéresse&nbsp;:
 
@@ -212,7 +212,7 @@ On remarque que le PHP n'est pas exécuté (donc un document vide est affiché) 
 
 Le fichier de configuration à modifier est
 
-`/etc/apache2/mods-available/php7.4.conf`
+`/etc/apache2/mods-enabled/php7.4.conf`
 
 C'est cette section qui nous intéresse&nbsp;:
 
