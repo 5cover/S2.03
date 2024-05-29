@@ -88,7 +88,9 @@ Index.html&nbsp;:
 
 `htpasswd -c /etc/apache2/pass testeur`
 
-Puis ajouter dans le fichier de configuration du site:
+Puis ajouter dans le fichier de configuration du site (000-default.conf) :
+
+
 
 ```text
 <Directory "/var/www/html/secret">
