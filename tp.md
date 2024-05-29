@@ -91,7 +91,7 @@ Index.html&nbsp;:
 Puis ajouter dans le fichier de configuration du site:
 
 ```text
-<Directory "/var/www/html/private">
+<Directory "/var/www/html/secret">
     AuthType Basic
     AuthName "Veuillez saisir votre mot de login/passe"
     AuthUserFile "/etc/apache2/pass"
