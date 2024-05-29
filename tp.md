@@ -2,6 +2,8 @@
 
 ## Le service Web avec le serveur Apache
 
+Dossier de partage VM : /mnt/hgfs/partageSAE/
+
 ### 2
 
 `systemctl status apache2`
