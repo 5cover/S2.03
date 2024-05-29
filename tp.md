@@ -117,7 +117,7 @@ Il est recommandé de créer un dossier secret pour sécuriser le site. En effet
 
 ### 3
 
-`127.0.0.1/secret/phpinfo.php`
+`http://127.0.0.1/secret/phpinfo.php`
 
 ### 4
 
