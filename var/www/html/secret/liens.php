@@ -1,5 +1,6 @@
 <?php
 
+// Fonction d'e string aléatoire
 function randomURL($URLlength = 8) {
     $charray = array_merge(range('a','z'), range('0','9'));
     $max = count($charray) - 1;
@@ -11,11 +12,18 @@ function randomURL($URLlength = 8) {
     return $url;
 }
 
-$link = randomURL(10);
+$link = randomURL(5);
+
+$user = "jackkie";
+
+// pour éviter la possibilité de doublons (TRÈS RARE)
+$link = rtrim(base64_encode($user), "=") . base64_encode($link); // lien = pseudo encodé + string aléatoire encodé
+
+
+$link = rtrim($link, "="); // enlève les == de base 64
 
 $mypage = fopen("$link.html", "w");
 
-$user = "jackkie";
 
 $content = "<!DOCTYPE html>
 <html lang=\"en\">
