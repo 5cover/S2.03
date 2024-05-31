@@ -17,7 +17,7 @@ body {
 
 .bg_nuage {
     background-color: teal;
-    background-image: url(img/nuage/ciel.jpg);
+    background-image: url("/img/nuage/ciel.jpg");
     background-repeat: no-repeat;
     background-blend-mode: hard-light;
     background-position: left;
@@ -146,7 +146,7 @@ form div:nth-child(2) {
 }
 
 .erreur404 {
-    background-image: url("img/nuage/nuage.png");
+    background-image: url("/img/nuage/nuage.png");
     background-repeat: no-repeat;
     background-position: 50% 7.5%;
     background-size: 120%;
