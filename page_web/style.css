@@ -2,11 +2,20 @@
     font: 1.2rem "Fira Sans", sans-serif;
 }
 
+:root {
+    --clr-button-conx-enable-- : rgb(32, 146, 32);
+    --clr-hvr-button-conx-enable-- : rgb(76, 197, 76);
+    --clr-actv-button-conx-enable-- : rgb(28, 90, 28);
+    --clr-button-incr-enable-- : rgb(32, 146, 32);
+    --clr-hvr-button-incr-enable-- :rgb(76, 197, 76);
+    --clr-actv-button-incr-enable-- : rgb(28, 90, 28);
+}
+
 body {
     margin: 0;
 }
 
-.login {
+.bg_nuage {
     background-color: teal;
     background-image: url(images/nuage/ciel.jpg);
     background-repeat: no-repeat;
@@ -98,10 +107,26 @@ form div:nth-child(2) {
 
 .box_link input {
     color: #fff;
-    background-color: rgb(28, 90, 28);
     transition: .5s background-color;
+}
+
+#submit_conx {
+    background-color: var(--clr-button-conx-enable--);
     &:hover {
-        background-color: rgb(32, 146, 32);
+        background-color: var(--clr-hvr-button-conx-enable--);
+    }
+    &:active {
+        background-color: var(--clr-actv-button-conx-enable--);
+    }
+}
+
+#submit_inscr {
+    background-color: var(--clr-button-incr-enable--);
+    &:hover {
+        background-color: var(--clr-hvr-button-incr-enable--);
+    }
+    &:active {
+        background-color: var(--clr-actv-button-incr-enable--);
     }
 }
 
@@ -118,12 +143,28 @@ form div:nth-child(2) {
 .erreur404 {
     background-image: url("images/nuage/nuage.png");
     background-repeat: no-repeat;
-    background-position: top;
-    background-size:cover;
+    background-position: 50% 7.5%;
+    background-size: 120%;
     size: inherit;
 }
 
-.erreur404 a {
+@keyframes rotation_bg {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    } 25% {
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+    } 75% {
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+    } 100% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }  
+}
+
+.back_index {
     color: #fff;
     background-color: #444;
     box-shadow: #333 10px 10px;
@@ -135,10 +176,9 @@ form div:nth-child(2) {
     bottom: 50px;
     text-decoration: none;
     transition: .5s all;
-}
-
-.erreur404 a:hover {
-    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .erreur404 p {
@@ -158,6 +198,7 @@ form div:nth-child(2) {
     box-shadow: #866 10px 10px;
     transition: .5s all;
     text-align: center;
+    animation: 10s rotation_bg;
 }
 
 footer {
