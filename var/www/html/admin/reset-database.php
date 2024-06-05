@@ -22,18 +22,21 @@ create extension citext;
 create domain email as citext
   check ( value ~ '^[a-zA-Z0-9.!#$%&''*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$' );
 
+create domain user_id as varchar(269);
 
 create table _user(
-    id varchar(268) primary key,
-    varchar(255) name not null unique,
-    adresse email not null unique;
-    password_hash text not null,
-    password_salt text not null,
+    id user_id primary key,
+    name varchar(255) not null unique,
+    email_address email not null unique,
+    first_name text not null,
+    last_name text not null,
+    -- https://www.php.net/manual/fr/function.password-hash.php recommends 255 chars
+    password_hash(255) text not null,
     validated boolean not null
 );
 
-create table user_token (
-    user_id varchar(268) primary key,
+create table _token (
+    user_id user_id primary key,
     selector varchar(255) not null,
     hashed_validator varchar(255) not null,
     expiry timestamp not null,
