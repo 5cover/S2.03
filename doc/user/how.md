@@ -7,23 +7,25 @@ We will store logged in users in a table
 ```mermaid
 classDiagram
 
-class _registration {
-    varchar(255) username pk
-    user_id text not null
+class _user {
+    id varchar[268] pk
+    varchar[255] name not null unique
     password_hash text not null
     password_salt text not null
 }
 
 class _login {
-    id int pk
-    last_interaction_time instant
-    ipv6 text
+    id varchar[268] pk
+    last_interaction_time instant not null
+    ipv6 varchar[45] not null
 }
 
-_registration "1" --> "0..1" _login
+_user "1" --> "0..1" _login
 ```
 
 User ID (personal page name): base 64 encode of random string
+
+Max length : 13 (random part length) + 255 (max username length) = 268
 
 Username max length : 255
 Password max length: 255
@@ -49,12 +51,18 @@ Input : username, password, confirm_password
 
 ## Login-required pages
 
-If an user personal page is accessed, redirect to homepage if the logged in user's IP is not this IP.
+If an user personal page is accessed, check if we have a token that means the current user authenticated already.
 
-## Logging out
+All the user pages where login are required will be put in the *user* subdirectory. And we addd a php header to all these pages to redirect to login if not authenticated.
 
-Explictly : set logon
+The login page will take an argument: next: where to redirect after authentication succeeds.
 
-Implicitly: timeout: after each interaction, set timeout in 5 hours, log out. Remove existing timeout
+Only user profile pages won't redirect - and it addition to checking if the current user is authenticated, it checks if the user is the same as the one of the profile page.
 
-An interaction: an user accessing a page (timeout _login where ip is current ip)
+## User pages
+
+When the server is asked for a url with a path of starting with "/user/profile/", fetch the last item. Example "dqsQSD465".
+
+Pass it to a PHP script that will generate the user page.
+
+Maybe we can implement caching later.
