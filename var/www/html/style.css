@@ -322,3 +322,52 @@ footer figure {
     justify-content: center;
     gap: 15px;
 }
+
+/* modif pour page_admin.php============================================= */
+#connecté{
+    background-color:aquamarine;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#connecté  >* {
+    margin: 20px;
+    padding: 5px;
+}
+
+#connecté a,.button{
+    border:solid 3px #8d5;
+    background-color: darkorange; 
+    text-decoration : none;
+}
+
+
+#acceuil{
+    display: flex;
+    flex-direction: column;
+}
+
+#pub{
+    
+    display: flex;
+    flex-direction: row;
+}
+#pub div{
+    border:solid 1em #866;
+    width: 50%;
+    background-color: blue;
+    
+}
+#pub p{ 
+    color: #fff;
+
+}
+
+#acceuil img{
+    width: 100%;
+   
+}
+
+
