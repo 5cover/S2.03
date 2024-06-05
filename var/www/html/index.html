@@ -11,7 +11,7 @@
 
 <body class="login bg_nuage">
   <div>
-    <form action="/secret/traitement.php" method="post">
+    <form action="/traitement.php" method="post">
       <label for="">Connexion</label>
       <div>
         <input type="text" name="identifiant_conx" placeholder="Identifiant" id="id_conx">
@@ -22,7 +22,7 @@
         <input type="submit" value="Connexion" name="Connexion_Test" id="submit_conx">
       </div>
     </form>
-    <form action="/secret/traitement.php" method="post">
+    <form action="/traitement.php" method="post">
       <label for="">Inscription</label>
       <div>
         <input type="text" name="identifiant_inscr" placeholder="Identifiant" id="id_inscr">
@@ -38,13 +38,16 @@
       </div>
     </form>
   </div>
-  <h1>Météo</h1>
+  <div>
+    <h1>Météo</h1>
+    <a href="">Admin</a>
+  </div>
   <script>
     const lien = document.querySelectorAll(".lien_login");
     const body = document.querySelector(".login");
     const form_connexion = document.querySelector("form:nth-child(1)");
     const form_inscription = document.querySelector("form:nth-child(2)");
-    const h1 = document.querySelector("h1");
+    const h1 = document.querySelector(".login > div:nth-child(2)");
 
     lien.forEach(element => {
       element.addEventListener("click", () => {
