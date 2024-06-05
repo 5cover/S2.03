@@ -26,15 +26,34 @@ body {
     transition: 2s all;
 }
 
-.login h1 {
-    color: white;
-    font-size: 3.5em;
+/* ##### Page de connection ##### */
+
+.login > div:nth-child(2) {
     position: absolute;
     left: 70%;
     top: 200px;
     transition: 1.5s all;
+}
+
+.login h1 {
+    color: white;
+    font-size: 3.5em;
     text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
              1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+.login > div:nth-child(2) a {
+    color: blue;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    margin-top: 150px;
+    margin-left: -160px;
+    transition: .5s all;
+    &:hover {
+        color: lightblue;
+    }
 }
 
 .login > div {
@@ -181,6 +200,8 @@ form div:nth-child(2) {
     }
 }
 
+/* ##### Erreur 404 #####*/
+
 .erreur404 p {
     color: #fff;
     text-shadow: black 5px 5px;
@@ -201,6 +222,61 @@ form div:nth-child(2) {
     animation: 10s rotation_bg;
 }
 
+/* ##### Page Météo ##### */
+
+header {
+    height: auto;
+    text-align: center;
+}
+
+header > div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header > div:nth-child(1) {
+    background-color: teal;
+    background-image: url(images/nuage/ciel.jpg);
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header div + div {
+    background-color: brown;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+header div + div > *{
+    margin-inline: 15px;
+    padding: 5px;
+}
+
+.meteo h1 {
+    font-size: 1.5em;
+    text-decoration: underline;
+    color: white;
+    backdrop-filter: blur(20px);
+    border: 3px solid black;
+    border-radius: 15px;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    box-shadow: teal -5px 5px;
+    padding: 15px;
+}
+
+header > div:nth-child(1) h2 {
+    margin-top: -15px;
+    color: white;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
 footer {
     padding: 15px;
     background-color: rgb(1, 25, 70);
@@ -219,7 +295,17 @@ footer a {
 }
 
 footer img {
-    background-color: chocolate;
     border-radius: 50%;
-    width: 40px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px lightblue solid;
+}
+
+footer figure {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }

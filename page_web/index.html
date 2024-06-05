@@ -34,13 +34,16 @@
             </div>
         </form> 
     </div>
-    <h1>Météo</h1>
+    <div>
+        <h1>Météo</h1>
+        <a href="">Admin</a>
+    </div>
     <script>
         const lien = document.querySelectorAll(".lien_login");
         const body = document.querySelector(".login");
         const form_connexion = document.querySelector("form:nth-child(1)");
         const form_inscription = document.querySelector("form:nth-child(2)");
-        const h1 = document.querySelector("h1");
+        const h1 = document.querySelector(".login > div:nth-child(2)");
 
         lien.forEach(element => {
             element.addEventListener("click", () => {
