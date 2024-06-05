@@ -92,8 +92,6 @@ Index.html&nbsp;:
 
 Puis ajouter dans le fichier de configuration du site (000-default.conf) :
 
-
-
 ```text
 <Directory "/var/www/html/secret">
     AuthType Basic
@@ -271,23 +269,23 @@ Ensuite la commande `status` permet d'obtenir des informations :
 ```text
 mysql  Ver 8.0.29 for Linux on x86_64 (MySQL Community Server - GPL)
 
-Connection id:		17
-Current database:	
-Current user:		root@localhost
-SSL:			Not in use
-Current pager:		stdout
-Using outfile:		''
-Using delimiter:	;
-Server version:		8.0.29 MySQL Community Server - GPL
-Protocol version:	10
-Connection:		Localhost via UNIX socket
-Server characterset:	utf8mb4
-Db     characterset:	utf8mb4
-Client characterset:	utf8mb4
-Conn.  characterset:	utf8mb4
-UNIX socket:		/var/run/mysqld/mysqld.sock
-Binary data as:		Hexadecimal
-Uptime:			27 min 55 sec
+Connection id:  17
+Current database: 
+Current user:  root@localhost
+SSL:   Not in use
+Current pager:  stdout
+Using outfile:  ''
+Using delimiter: ;
+Server version:  8.0.29 MySQL Community Server - GPL
+Protocol version: 10
+Connection:  Localhost via UNIX socket
+Server characterset: utf8mb4
+Db     characterset: utf8mb4
+Client characterset: utf8mb4
+Conn.  characterset: utf8mb4
+UNIX socket:  /var/run/mysqld/mysqld.sock
+Binary data as:  Hexadecimal
+Uptime:   27 min 55 sec
 
 Threads: 2  Questions: 11  Slow queries: 0  Opens: 130  Flush tables: 3  Open tables: 49  Queries per second avg: 0.006
 ```

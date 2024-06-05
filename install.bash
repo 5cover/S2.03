@@ -21,7 +21,8 @@ readonly replace='
 </FilesMatch>'
 sed -ie "s/$match/$replace/" /etc/apache2/mods-enabled/php7.4.conf
 
-mysql_secure_installation <<< 'lannion n n y y n y'
+# does not work at this time
+# mysql_secure_installation -p 'lannion' <<< 'n n y y n y'
 
 dpkg -i /usr/local/src/*
 
