@@ -165,7 +165,7 @@ form div:nth-child(2) {
 }
 
 .erreur404 {
-    background-image: url("/img/nuage/nuage.png");
+    background-image: url("img/nuage/nuage.png");
     background-repeat: no-repeat;
     background-position: 50% 7.5%;
     background-size: 120%;
